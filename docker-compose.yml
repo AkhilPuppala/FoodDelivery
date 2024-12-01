@@ -13,16 +13,16 @@ services:
     ports:
       - '5000:5000'
     environment:
-      - mongo_url=mongodb+srv://AkhilPuppala:Akhil1203@cluster0.e6z5o.mongodb.net/foodDB
+      - mongo_url=mongodb://mongodb:27017/foodDB  # Connect using the service name, not localhost
     depends_on:
-      - mongodb  # Optional, only if you want to connect to a local MongoDB instance
+      - mongodb  # Ensure MongoDB is up before starting the backend
 
   mongodb:
     image: mongo:latest
     ports:
-      - '27017:27017'
+      - '27019:27017'  # Expose MongoDB on host port 27018
     volumes:
-      - mongodb_data:/data/db
+      - mongodb_data:/data/db  # Persist MongoDB data
 
 volumes:
   mongodb_data:
