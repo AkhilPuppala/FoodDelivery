@@ -26,5 +26,17 @@ pipeline {
                 sh 'docker build -t backend-image .'
             }}
         }
+        stage('Push to Docker Hub') {
+            steps {
+                script {
+                        sh "docker login --username akhilpuppala --password Akhil@1203"
+                        sh 'docker tag frontend-image akhilpuppala/frontend-image:latest'
+                        sh 'docker push akhilpuppala/frontend-image:latest'
+                        sh "docker tag backend-image akhilpuppala/backend-image:latest"
+                        sh "docker push akhilpuppala/backend-image:latest"
+                    
+                }
+            }
+        }
     }
 }
