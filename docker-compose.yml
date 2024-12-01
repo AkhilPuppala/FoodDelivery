@@ -13,9 +13,9 @@ services:
     ports:
       - '5000:5000'
     environment:
-      - mongo_url=mongodb://mongodb:27017/foodDB
+      - mongo_url=mongodb+srv://AkhilPuppala:Akhil1203@cluster0.e6z5o.mongodb.net/foodDB
     depends_on:
-      - mongodb
+      - mongodb  # Optional, only if you want to connect to a local MongoDB instance
 
   mongodb:
     image: mongo:latest

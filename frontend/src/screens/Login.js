@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
   let navigate = useNavigate();

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
-import Carousal from '../components/Carousal';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 

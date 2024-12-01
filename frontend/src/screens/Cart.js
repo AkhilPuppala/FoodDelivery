@@ -2,7 +2,6 @@ import React from 'react';
 import Delete from '@mui/icons-material/Delete'; // Updated import path
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 export default function Cart() {
   let data = useCart();

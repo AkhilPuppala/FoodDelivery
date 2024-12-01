@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+.your-bootstrap-dark-class {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
