@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+    environment {
+        mongo_url = "mongodb://localhost:27017/foodDB"
+        // JWT_SECRET = "SECRETLEL"
+    }
+    stages {
+        stage('Stage 1: Git Clone') {
+            steps {
+                git branch: 'main',
+                url: 'https://github.com/AkhilPuppala/FoodDel.git'
+            }
+        }
+        stage('client build') {
+            steps {
+                dir('frontend'){
+                sh "npm install"
+                sh 'docker build -t frontend-image .'
+            }
+            }
+        }
+        stage("Server build") {
+            steps {
+                dir('backend'){
+                sh "npm install"
+                sh 'docker build -t backend-image .'
+            }}
+        }
+    }
+}
