@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    image: akhilpuppala/frontend-image:latest
+    restart: always
+    ports:
+      - '3000:3000'
+  backend:
+    image: akhilpuppala/backend-image:latest
+    restart: always
+    ports:
+      - '5000:5000'
+    environment:
+      - mongo_url=mongodb://localhost:27017/foodDB
