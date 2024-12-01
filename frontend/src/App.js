@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import Home from './screens/Home';
 import {
   BrowserRouter as Router,
