@@ -8,7 +8,7 @@ pipeline {
         stage('Stage 1: Git Clone') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/AkhilPuppala/FoodDel.git'
+                url: 'https://github.com/AkhilPuppala/FoodDelivery.git'
             }
         }
         stage('client build') {
