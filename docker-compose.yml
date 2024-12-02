@@ -5,25 +5,13 @@ services:
     restart: always
     ports:
       - '3000:3000'
-    command: npm start  
-
+    command: npm start
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider
   backend:
     image: akhilpuppala/backend-image:latest
     restart: always
     ports:
       - '5000:5000'
     environment:
-      - mongo_url=mongodb://mongodb:27017/foodDB  
-    depends_on:
-      - mongodb  
-
-  mongodb:
-    image: mongo:latest
-    restart: always
-    ports:
-      - '27017:27017'
-    volumes:
-      - mongodb_data:/data/db
-
-volumes:
-  mongodb_data:
+      - mongo_url=mongodb://localhost:27017/foodDB  
