@@ -1,16 +1,15 @@
 FROM node:21
 
-# Create app directory
+# Set working directory
 WORKDIR /app
 
 # Install app dependencies
-COPY ./package.json /app
-COPY ./package-lock.json /app
-RUN npm install
-# If you are building your code for production
-# RUN npm install --only=production
+COPY package.json package-lock.json /app/
 
-# Bundle app source
+# Install dependencies
+RUN npm install
+
+# Copy app source code
 COPY . /app
 
 # Expose the application port
