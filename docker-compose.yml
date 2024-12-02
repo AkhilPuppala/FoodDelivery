@@ -1,28 +1,22 @@
 version: '3'
 services:
-  frontend:
-    image: akhilpuppala/frontend-image:latest
-    restart: always
+  container1:
+    image: frontend-image
     ports:
-      - '3000:3000'
-    command: npm start  # Use "npm run dev" if you prefer
-
-  backend:
-    image: akhilpuppala/backend-image:latest
-    restart: always
-    ports:
-      - '5000:5000'
-    environment:
-      - mongo_url=mongodb://mongodb:27017/foodDB  # Connect using the service name, not localhost
+      - "3000:3000"
+    networks:
+      - mynetwork
     depends_on:
-      - mongodb  # Ensure MongoDB is up before starting the backend
+      - container2
 
-  mongodb:
-    image: mongo:latest
+  container2:
+    image: backend-image
     ports:
-      - '27019:27017'  # Expose MongoDB on host port 27018
-    volumes:
-      - mongodb_data:/data/db  # Persist MongoDB data
+      - "5000:5000"
+    networks:
+      - mynetwork
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
-volumes:
-  mongodb_data:
+networks:
+  mynetwork:
