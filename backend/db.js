@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-
+// umLsSsfuRrLfithN
 const mongoDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/foodDB', { 
+    await mongoose.connect('mongodb+srv://AkhilPuppala:umLsSsfuRrLfithN@cluster0.e6z5o.mongodb.net/foodDB', { 
       useNewUrlParser: true, 
       useUnifiedTopology: true 
     });

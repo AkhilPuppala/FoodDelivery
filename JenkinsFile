@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        mongo_url = "mongodb://localhost:27017/foodDB"
+        mongo_url = "mongodb+srv://AkhilPuppala:umLsSsfuRrLfithN@cluster0.e6z5o.mongodb.net/foodDB"
         // JWT_SECRET = "SECRETLEL"
     }
     stages {
