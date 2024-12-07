@@ -3,13 +3,18 @@ import Card from '../components/Card';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
+const backendUrl = window.location.hostname === 'localhost' ? 
+  'http://localhost:5000' : 
+  'http://192.168.49.2:30010';
+
+
 export default function Home() {
   const [foodCat, setFoodCat] = useState([]);
   const [foodItem, setFoodItem] = useState([]);
   const [search, setSearch] = useState(""); // Define `search` state
 
   const loadData = async () => {
-    let response = await fetch('http://localhost:5000/api/foodData', {
+    let response = await fetch(`${backendUrl}/api/foodData`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

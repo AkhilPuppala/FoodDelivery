@@ -3,6 +3,10 @@ import Delete from '@mui/icons-material/Delete'; // Updated import path
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 import Navbar from '../components/Navbar';
 
+const backendUrl = window.location.hostname === 'localhost' ? 
+  'http://localhost:5000' : 
+  'http://192.168.49.2:30010';
+
 export default function Cart() {
   let data = useCart();
   let dispatch = useDispatchCart();
@@ -18,7 +22,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
     
-    let response = await fetch("http://localhost:5000/api/orderData", {
+    let response = await fetch(`${backendUrl}/api/orderData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

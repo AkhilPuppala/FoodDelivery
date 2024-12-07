@@ -2,12 +2,16 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
+const backendUrl = window.location.hostname === 'localhost' ? 
+  'http://localhost:5000' : 
+  'http://192.168.49.2:30010';
+
 export default function MyOrder() {
     const [orderData, setOrderData] = useState([]);  // Initialize as an array
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'));
-        await fetch("http://localhost:5000/api/myorder", {
+        await fetch(`${backendUrl}/api/myorder`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

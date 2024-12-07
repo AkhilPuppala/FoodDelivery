@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const backendUrl = window.location.hostname === 'localhost' ? 
+  'http://localhost:5000' : 
+  'http://192.168.49.2:30010';
+
 export default function Signup() {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", geolocation: "" });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/createuser", {
+        const response = await fetch(`${backendUrl}/api/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

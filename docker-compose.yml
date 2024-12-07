@@ -5,9 +5,9 @@ services:
     restart: always
     ports:
       - '3000:3000'
-    command: npm start
-    environment:
-      - NODE_OPTIONS=--openssl-legacy-provider
+    # command: npm start
+    # environment:
+    #   - NODE_OPTIONS=--openssl-legacy-provider
   backend:
     image: akhilpuppala/backend-image:latest
     restart: always

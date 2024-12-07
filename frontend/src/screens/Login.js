@@ -1,13 +1,17 @@
 import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
+const backendUrl = window.location.hostname === 'localhost' ? 
+  'http://localhost:5000' : 
+  'http://192.168.49.2:30010';
+
 export default function Login() {
   let navigate = useNavigate();
   const [credentials, setCredentials] = useState({email: "", password: ""});
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/loginuser", {
+        const response = await fetch(`${backendUrl}/api/loginuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
