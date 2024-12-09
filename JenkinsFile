@@ -1,8 +1,10 @@
 pipeline {
     agent any
-    environment {
-        mongo_url = "mongodb+srv://AkhilPuppala:umLsSsfuRrLfithN@cluster0.e6z5o.mongodb.net/foodDB"
-        // JWT_SECRET = "SECRETLEL"
+environment {
+        MONGO_URL = "mongodb+srv://AkhilPuppala:umLsSsfuRrLfithN@cluster0.e6z5o.mongodb.net/foodDB"
+        // JWT_SECRET = "SDNCN23423TN394UFKND"
+        // jwt_token = "dhfmharnca394020"
+        KUBECONFIG = '/var/lib/jenkins/.kube/config'
     }
     stages {
         stage('Stage 1: Git Clone') {
