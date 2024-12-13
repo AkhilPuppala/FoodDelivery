@@ -2,8 +2,6 @@ pipeline {
     agent any
 environment {
         MONGO_URL = "mongodb+srv://AkhilPuppala:umLsSsfuRrLfithN@cluster0.e6z5o.mongodb.net/foodDB"
-        // JWT_SECRET = "SDNCN23423TN394UFKND"
-        // jwt_token = "dhfmharnca394020"
         KUBECONFIG = '/var/lib/jenkins/.kube/config'
     }
     stages {
@@ -43,7 +41,7 @@ environment {
         stage('Docker-Compose Deployment') {
             steps {
                 script { 
-                    sh 'ansible-playbook -i inventory-k8 playbook-k8.yml'
+                    sh 'docker compose up'
                 }
             }
         }
