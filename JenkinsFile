@@ -41,7 +41,7 @@ environment {
         stage('Docker-Compose Deployment') {
             steps {
                 script { 
-                    sh 'docker compose up'
+                    sh 'ansible-playbook -i inventory playbook.yml'
                 }
             }
         }
