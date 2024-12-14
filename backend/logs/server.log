@@ -1,0 +1,15 @@
+{"email":"virat@gmail.com","level":"info","message":"User logged in successfully","timestamp":"2024-12-14 15:32:22","userId":"67547cc681483dd7ac1fe5be"}
+{"level":"info","message":"User created successfully","timestamp":"2024-12-14 15:34:51","userId":"675d5843708945446894a3ad"}
+{"email":"surya@gmail.com","level":"info","message":"User logged in successfully","timestamp":"2024-12-14 15:35:13","userId":"675d5843708945446894a3ad"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:35:13"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:35:13"}
+{"email":"surya@gmail.com","level":"info","message":"New order created successfully","timestamp":"2024-12-14 15:35:32"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:35:34"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:35:34"}
+{"email":"virat@gmail.com","level":"warn","message":"Login failed: Incorrect password","timestamp":"2024-12-14 15:36:00"}
+{"email":"virat@gmail.com","level":"info","message":"User logged in successfully","timestamp":"2024-12-14 15:36:05","userId":"67547cc681483dd7ac1fe5be"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:36:05"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:36:05"}
+{"email":"virat@gmail.com","level":"info","message":"Order updated successfully","timestamp":"2024-12-14 15:36:24"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:36:26"}
+{"categoryCount":3,"foodItemCount":12,"level":"info","message":"Food data fetched successfully","timestamp":"2024-12-14 15:36:26"}

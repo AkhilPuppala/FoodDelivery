@@ -1,12 +1,24 @@
 const express = require('express');
 const router = express.Router();
+const logger = require('../../logger/logging');
 
-router.post('/foodData',(req, res)=>{
-    try{
+// Route: Food Data
+router.post('/foodData', (req, res) => {
+    try {
+        if (!global.food_items || !global.foodCategory) {
+            logger.warn('Global food data or categories are missing');
+            return res.status(500).json({ error: 'Food data not available' });
+        }
+
+        logger.info('Food data fetched successfully', {
+            foodItemCount: global.food_items.length,
+            categoryCount: global.foodCategory.length
+        });
         res.send([global.food_items, global.foodCategory]);
-    }catch(error){
-        console.log(error.message);
+    } catch (error) {
+        logger.error('Error fetching food data', { error: error.message });
+        res.status(500).json({ error: 'Server error' });
     }
-})
+});
 
 module.exports = router;

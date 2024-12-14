@@ -1,0 +1,5 @@
+{"email":"virat@gmail.com","level":"info","message":"User logged in successfully","timestamp":"2024-12-14 15:20:29","userId":"67547cc681483dd7ac1fe5be"}
+{"email":"virat@gmail.com","level":"info","message":"User logged in successfully","timestamp":"2024-12-14 15:21:18","userId":"67547cc681483dd7ac1fe5be"}
+{"email":"virat@gmail.com","level":"info","message":"User logged in successfully","timestamp":"2024-12-14 15:23:19","userId":"67547cc681483dd7ac1fe5be"}
+{"email":"akhil@gmail.com","level":"warn","message":"Login failed: User not found","timestamp":"2024-12-14 15:25:13"}
+{"email":"virat@gmail.com","level":"info","message":"User logged in successfully","timestamp":"2024-12-14 15:25:22","userId":"67547cc681483dd7ac1fe5be"}
