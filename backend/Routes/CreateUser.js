@@ -6,7 +6,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const logger = require('../../logger/logging');
 
-// JWT Secret Key
 const jwtSecret = "erhfgbiuw3eio2132iier";
 
 router.post('/createuser',
