@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const logger = require('../../logger/logging');
+const logger = require('../../logger/logging.js');
 
 // Route: Food Data
 router.post('/foodData', (req, res) => {

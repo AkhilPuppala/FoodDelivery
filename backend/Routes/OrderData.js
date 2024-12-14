@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Order = require('../models/Orders');
-const logger = require('../../logger/logging');
+const logger = require('../../logger/logging.js');
 
 // Route: Order Data
 router.post('/orderData', async (req, res) => {

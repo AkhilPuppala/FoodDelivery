@@ -4,7 +4,7 @@ const User = require('../models/User');
 const { body, validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const logger = require('../../logger/logging');
+const logger = require('../../logger/logging.js');
 
 const jwtSecret = "erhfgbiuw3eio2132iier";
 
