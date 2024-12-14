@@ -16,5 +16,5 @@ COPY . /app
 # Expose the application port
 EXPOSE 5002
 
-# Start the application using npx and nodemon
+# Start the application using npx, nodemon
 CMD ["npx", "nodemon", "./index.js"]
