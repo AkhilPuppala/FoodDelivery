@@ -9,7 +9,6 @@ const logger = require('../../logger/logging');
 // JWT Secret Key
 const jwtSecret = "erhfgbiuw3eio2132iier";
 
-// Route: Create User
 router.post('/createuser',
     [
         body('email').isEmail(),
